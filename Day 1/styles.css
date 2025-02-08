@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+.navbar {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #27ae60;
+}
+
+.btn-register {
+  background: #27ae60;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-register:hover {
+  background: #219150;
+}
+
+.hero-section {
+  display: flex;
+  padding: 50px;
+  background: #f9f9f9;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.search-bar {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar input,
+.search-bar select,
+.search-bar button {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.search-bar button:hover {
+  background-color: #27ae60;
+  color: white;
+  cursor: pointer;
+}
+
+.features-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+  background: #f2f2f2;
+  padding: 30px;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature img {
+  transition: transform 0.3s ease;
+}
+
+.feature:hover img {
+  transform: scale(1.1);
+}
+
+.popular-courses {
+  padding: 50px;
+}
+
+.courses-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.course-card {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 30%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.testimonials {
+  background: #27ae60;
+  color: white;
+  padding: 50px;
+  text-align: center;
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer {
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
