@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dark Mode Toggle</title>
+  <style>
+    body{
+      margin:0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    
+    main{
+      margin: 5vh 15%;
+    }
+    h1{
+      font-size: 45px;
+      font-weight: 600;
+      text-align: center;
+    }
+    img{
+      width: 50%;
+      height: auto;
+    }
+    p{
+      text-align: justify;
+      font-style: 15px;
+    }
+    #dark-mode{
+      position: absolute;
+      width: 40px;
+      height: 20px;
+      right: 20px;
+      top: 20px;
+      border: 2px solid;
+      border-radius: 30%;
+    }
+    #dark-mode:before{
+      position: absolute;
+      content: "";
+      width: 19px;
+      height: 18px;
+      left: 1px;
+      top: 1px;
+      border-radius: 25%;
+      cursor: pointer;
+      background: #000;
+      transition: 0.4s;
+    }
+    #dark-mode.active:before{
+      left: 18px;
+      background: #fff;
+    }
+    body.dark{
+      background: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="dark-mode"></div>
+  </header>
+  <main>
+    <h1>Easy Dark Mode</h1>
+    <img src="20250306_054838.jpg">
+    <p>Build Skills With Experts Any Time, Anywhere.Education is both the act of teaching and receiving knowledge.
+    </p>
+  </main>
+  
+  <script>
+    let darkMode = document.getElementById('dark-mode');
+    let content = document.getElementsByTagName('body')[0];
+    
+    darkMode.addEventListener('click', () => {
+      darkMode.classList.toggle('active');
+      content.classList.toggle('dark');
+    });
+  </script>
+</body>
+
+</html>
